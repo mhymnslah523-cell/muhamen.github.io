@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شجاع للتوصيل السريع</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- CSS Assets -->
+  <link rel="stylesheet" type="text/css" href="assets/css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/flat-admin.css">
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css">
+  <link rel="stylesheet" type="text/css" href="Wickedpicker/dist/wickedpicker.min.css">
+  <link rel="stylesheet" type="text/css" href="DataTables/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/theme/blue.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.css">
+
+  <!-- Core Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/scannerdetection.js"></script>
+  <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+  <script src="assets/ckeditor/ckeditor.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="app app-default">
+  
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header"> 
+      <a class="sidebar-brand" href="home.php"><strong>شجاع</strong></a>
+      <button type="button" class="sidebar-toggle"> <i class="fa fa-times"></i> </button>
+    </div>
+    <div class="sidebar-menu">
+      <ul class="sidebar-nav">
+        <li> 
+          <a href="home.php">
+            <div class="icon"> <i class="fa fa-dashboard" aria-hidden="true"></i> </div>
+            <div class="title">الرئيسية</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="postsearch_wasl.php">
+            <div class="icon"> <i class="fa fa-search" aria-hidden="true"></i> </div>
+            <div class="title">البحث</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_statewasl0.php">
+            <div class="icon"> <i class="fa fa-print" aria-hidden="true"></i> </div>
+            <div class="title">غير مؤكد</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_statewasl0astlam.php">
+            <div class="icon"> <i class="fa fa-print" aria-hidden="true"></i> </div>
+            <div class="title">ب. مندوب الاستلام</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_statewasl.php?Citytype=0">
+            <div class="icon"> <i class="fa fa-print" aria-hidden="true"></i> </div>
+            <div class="title">طلبات داخلية</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_statewasl.php?Citytype=1">
+            <div class="icon"> <i class="fa fa-print" aria-hidden="true"></i> </div>
+            <div class="title">طلبات خارجية</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="show_waiting.php">
+            <div class="icon"> <i class="fa fa-print" aria-hidden="true"></i> </div>
+            <div class="title">قيد الانتظار</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_archives.php">
+            <div class="icon"> <i class="fa fa-archive" aria-hidden="true"></i> </div>
+            <div class="title">الارشيف</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="search_late.php">
+            <div class="icon"> <i class="fa fa-archive" aria-hidden="true"></i> </div>
+            <div class="title">الطلبات المتأخرة</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_comments.php">
+            <div class="icon"> <i class="fa fa-comments-o" aria-hidden="true"></i> </div>
+            <div class="title">الردود</div>
+          </a>
+        </li>
+        <li> 
+          <a href="search_lists.php">
+            <div class="icon"> <i class="fa fa-list" aria-hidden="true"></i> </div>
+            <div class="title">القوائم</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="manage_afraa_failed.php">
+            <div class="icon"> <i class="fa fa-close" aria-hidden="true"></i> </div>
+            <div class="title">تعديلات الفروع</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="search_client_not_active.php">
+            <div class="icon"> <i class="fa fa-list" aria-hidden="true"></i> </div>
+            <div class="title">عملاء غير فعالين</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="StickersGen.php">
+            <div class="icon"> <i class="fa fa-barcode" aria-hidden="true"></i> </div>
+            <div class="title">توليد وصولات</div>
+          </a> 
+        </li>
+        <li class="active"> 
+          <a href="under_verification.php">
+            <div class="icon"> <i class="fa fa-refresh" aria-hidden="true"></i> </div>
+            <div class="title">قيد التحقق</div>
+          </a> 
+        </li>
+        <li> 
+          <a href="logout.php">
+            <div class="icon"> <i class="fa fa-sign-out" aria-hidden="true"></i> </div>
+            <div class="title">تسجيل خروج</div>
+          </a> 
+        </li>
+      </ul>
+    </div>
+  </aside>   
+
+  <!-- Main Container -->
+  <div class="app-container">
+    <nav class="navbar navbar-default" id="navbar">
+      <div class="container-fluid">
+        <div class="navbar-collapse collapse in">
+          <ul class="nav navbar-nav navbar-mobile">
+            <li>
+              <button type="button" class="sidebar-toggle"> <i class="fa fa-bars"></i> </button>
+            </li>
+            <li class="logo"> <a class="navbar-brand" href="#">شجاع للتوصيل السريع</a> </li>
+            <li>
+              <button type="button" class="navbar-toggle">
+                <img class="profile-img" src="images/profile.png" alt="Profile">
+              </button>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-left">
+            <li class="navbar-title">شجاع للتوصيل السريع</li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown profile"> 
+              <a href="profile.php" class="dropdown-toggle" data-toggle="dropdown">                
+                <img class="profile-img" src="images/profile.png" alt="Profile">
+                <div class="title">الملف الشخصي</div>
+              </a>
+              <div class="dropdown-menu">
+                <div class="profile-info">
+                  <h4 class="username">حساب لوحة التحكم</h4>
+                </div>
+                <ul class="action">                
+                  <li><a href="logout.php">تسجيل خروج</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 	
+	
+    <!-- Main Content -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="page_title_block">
+            <div class="col">
+              <div class="page_title">قيد التحقق</div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          
+          <div class="card-body mrg_bottom"> 
+            <div class="form-group">
+              <div style="float: none;" class="col-md-12 center-block">
+                <div id="datatableclient_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                  <table id="datatableclient" class="display table table-striped table-bordered table-hover dataTable" role="grid" style="width: 100%;">
+                    <thead>
+                      <tr role="row">
+                        <th>الاجراءات</th>
+                        <th>#</th>
+                        <th>رقم الوصل</th>
+                        <th>المبلغ الكلي</th>
+                        <th>الحالة</th>
+                        <th>نوع الحالة</th>
+                        <th>تنزيل</th>
+                        <th>الملاحظات</th>
+                        <th>تعديل بواسطة</th>
+                        <th>تاريخ التعديل</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="odd">
+                        <td valign="top" colspan="10" class="dataTables_empty">ليست هناك بيانات متاحة في الجدول</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+		
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="footer-copyright">نظام شجاع للتوصيل السريع © 2026</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- Footer Scripts -->
+<script type="text/javascript" src="assets/js/vendor.js"></script> 
+<script type="text/javascript" src="DataTables/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="DataTables/jszip.min.js"></script>
+<script type="text/javascript" src="DataTables/buttons.html5.min.js"></script>
+<script type="text/javascript" src="Wickedpicker/dist/wickedpicker.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+<script>
+$(document).ready(function() {
+  $('.datepicker').datepicker();
+
+  $('#datatableclient thead tr').clone(true).appendTo('#datatableclient thead');
+  $('#datatableclient thead tr:eq(1) th').each(function (i) {
+    var title = $(this).text();
+    $(this).html('<input type="text" class="form-control input-sm" placeholder="' + title + '" />');
+
+    $('input', this).on('keyup change', function () {
+      if (table.column(i).search() !== this.value) {
+        table.column(i).search(this.value).draw();
+      }
+    });
+  });
+
+  var table = $('#datatableclient').DataTable({
+    orderCellsTop: true,
+    paging: true,
+    order: [[1, "asc"]],
+    scrollX: true,
+    language: {
+      "sEmptyTable": "ليست هناك بيانات متاحة في الجدول",
+      "sLoadingRecords": "جارٍ التحميل...",
+      "sProcessing": "جارٍ التحميل...",
+      "sLengthMenu": "أظهر _MENU_ مدخلات",
+      "sZeroRecords": "لم يعثر على أية سجلات",
+      "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+      "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+      "sSearch": "بحث:",
+      "oPaginate": {
+        "sFirst": "الأول",
+        "sPrevious": "السابق",
+        "sNext": "التالي",
+        "sLast": "الأخير"
+      }
+    },
+    dom: 'lBfrtip',
+    buttons: [{
+      extend: 'excelHtml5',
+      autoFilter: false,
+      sheetName: 'Exported data'
+    }]
+  });
+});
+
+function deleteRoww(_this) {
+  var idwasl = $(_this).closest("tr").attr("id"); 
+  $.getJSON("under_verification.php?delete_id=" + idwasl, function(data) {});
+  $(_this).closest("tr").remove();
+}
+</script>
+</body>
+</html>
